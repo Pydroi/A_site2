@@ -1,0 +1,85 @@
+{% extends "main/base.html" %}
+
+
+{% block title %}
+Home page
+{% endblock %}
+
+
+
+
+
+
+{% block content %}
+
+
+#characters {
+    background-color: #fff;
+    padding: 80px 0;
+  }
+ 
+  .character {
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+  }
+ 
+  .character h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0;
+    text-align: center;
+  }
+ 
+  .character p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0;
+    text-align: center;
+    font-size: 16px;
+  }
+ 
+  .character:hover {
+    transform: scale(1.05);
+  }
+ 
+  .character:hover h3, .character:hover p {
+    visibility: visible;
+    opacity: 1;
+  }
+ 
+  .character h3, .character p {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+ 
+  #characters h2 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+ 
+  @media (max-width: 767px) {
+    .character {
+      margin-bottom: 30px;
+    }
+  }
+
+
+ 
+<h1>home page</h1>
+
+
+{% endblock %}
